@@ -1,23 +1,8 @@
-> [!WARNING]
-> This repository is AI-assisted and manually reviewed. It is local-only in the resource-safe small deterministic tranche.
+> [!NOTE]
+> This repository is AI-assisted and manually reviewed. Copyright may subsist only in human-authored portions to the extent applicable.
 
 # prolog-stakeholder
 
-Prolog implementation of the stakeholder deterministic first tranche using GNU Prolog.
+Compiled GNU Prolog deterministic stakeholder runtime with full classic-six + modern-core, grouped later-family fallbacks, normalized seeded JSON, list-values, and provider fail-fast.
 
-## Current tranche
-
-- Full dedicated `classic-six + modern-core` generator families.
-- Grouped fallback for later generator families.
-- Deterministic normalized JSON with same-seed stability.
-- `--list-values`, `--focus-family`, `--output-format`, `--seed`, and explicit `--experimental-provider` fail-fast.
-- Full live-provider/runtime support remains deferred to the later provider wave.
-
-## Commands
-
-- `python3 scripts/validate_scaffold.py`
-- `make compiler-proof`
-- `make test`
-- `make build && bin/stakeholder --list-values`
-
-Docker is intentionally not used in this M1-safe pass; native GNU Prolog is the validation lane.
+GitHub CI runs GNU Prolog native tests, Docker smokes, compile-check SAST, dependency review, actionlint, contract, and workflow security.

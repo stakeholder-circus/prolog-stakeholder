@@ -1,14 +1,5 @@
 # Gaps
 
-## Closed in this tranche
+Closed: scaffold state, classic-six + modern-core depth, grouped fallbacks, provider fail-fast, native, Docker, compile-check, dependency, and workflow-security gates.
 
-- Scaffold-only status replaced with a native Prolog deterministic CLI.
-- Dedicated `classic-six + modern-core` families implemented.
-- Later families use explicit grouped fallback renderers.
-- Experimental provider flags fail fast.
-
-## Remaining gaps
-
-- Docker validation is deferred for M1 resource safety.
-- Full live-provider/runtime support is deferred to the provider rollout wave.
-- Remote publication and required-check binding are not started.
+Remaining: full live-provider/runtime support.

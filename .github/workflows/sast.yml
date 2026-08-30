@@ -1,9 +1,14 @@
-name: ci-native
-on: [workflow_dispatch, push, pull_request]
+name: sast
+on:
+  workflow_dispatch:
+  push:
+  pull_request:
+  schedule:
+    - cron: '47 4 * * 1'
 permissions:
   contents: read
 jobs:
-  native:
+  prolog-compile-check:
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
@@ -13,6 +18,4 @@ jobs:
       - run: |
           sudo apt-get update
           sudo apt-get install --yes --no-install-recommends gprolog
-      - run: make compiler-proof
       - run: make analyze
-      - run: make test
